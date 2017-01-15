@@ -5,5 +5,7 @@
         <div><label>Gross Pay: </label>${{employee.grossPay}}</div>
         <div><label>Net Pay: </label>${{netPay()}}</div>    
     </div>
-    <deduction-list [deductions]='employee.deductions' (onSelected)='deductionSelected($event)'></deduction-list>
+    <deduction-list [deductions]='employee.deductions' (onSelected)='deductionSelected($event)'>
+        <div list-header class="list-header">Current Deductions</div>
+    </deduction-list>
 </div>

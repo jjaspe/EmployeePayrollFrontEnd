@@ -1,0 +1,4 @@
+<h3>Deductions</h3>
+<div *ngFor='let deduction of deductions'>
+    <deduction-card [deduction]='deduction' (click)='selected(deduction)'></deduction-card>
+</div>

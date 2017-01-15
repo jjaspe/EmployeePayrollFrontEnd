@@ -1,0 +1,7 @@
+<div [ngSwitch]="view">
+    <employee-list *ngSwitchCase='views.list'
+        class="skinny" [employees]='allEmployees' (onSelected)='cardSelected($event)'></employee-list>
+    <div *ngSwitchCase='views.details' >
+        <employee-edit [employee]='selected'  (done)='onBack($event)'></employee-edit>
+    </div>    
+</div>
